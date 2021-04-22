@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{"415b":function(e,n,t){"use strict";t.r(n);var a=function(){var e=this,n=e.$createElement;e._self._c;return e._m(0)},c=[function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",[t("h1",[e._v("Meet page")])])}],o={name:"Home",components:{}},r=o,u=t("2877"),l=Object(u["a"])(r,a,c,!1,null,null,null);n["default"]=l.exports}}]);
+//# sourceMappingURL=about.dca4d2cf.js.map
