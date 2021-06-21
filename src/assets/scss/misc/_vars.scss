@@ -1,0 +1,39 @@
+$maxWidth: 1920;//ширина макета в граф. редакторе
+$maxWidthContainer: 1200;//ширина ограничивающего контейнера
+
+//colors
+$accent: #FFCC00;
+$text: #151522;
+$text-light: #666666;
+$text-blend: #666666;
+$link: #0084F4;
+$gray: #E0E0E0;
+$l-gray: #F5F5F5;
+
+// media
+$lg: 1199px;
+$md: 991px;
+$sm: 767px;
+$xs: 576px;
+$xss: 480px;
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1170px);
+
+$header-height: 44px;
+
+$gutter: $grid-gutter-width;
+
+
+$sf-d-light: 'SF-Pro-Display-Light', sans-serif;
+$sf-d-med: 'SF-Pro-Display-Medium', sans-serif;
+$sf-d-reg: 'SF-Pro-Display-Regular', sans-serif;
+$sf-d-semi: 'SF-Pro-Display-Semibold', sans-serif;
+$sf-t-light: 'SF-Pro-Text-Light', sans-serif;
+$sf-t-reg: 'SF-Pro-Text-Regular', sans-serif;
+$sf-t-semi: 'SF-Pro-Text-Semibold', sans-serif;
+
+

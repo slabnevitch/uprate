@@ -1,0 +1,120 @@
+.main-screen{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	max-width: 767px;
+	margin: 0 auto;
+	background-color: #fff;
+	overflow: hidden;	
+
+	.wrapper{
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 0;
+
+		.button.empty{
+			margin-bottom: 15px;
+		}
+	}
+}
+.logo{
+	max-width: 190px;
+	height: 50px;
+	margin: 35px auto 12px auto;
+	text-align: center;
+	img{
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+.main-visual{
+	max-width: 311px;
+	max-height: 276px;
+	width: 100%;
+	// height: 0;
+	// padding-bottom: 88%;
+	flex: 1 0 0;
+	position: relative;
+	margin: 0 auto 32px auto;
+	img{
+		width: 100%;
+		height: 100%;
+		@include absolute-center;
+	}
+}
+.main-screen-description{
+	padding: 0 15px;
+	margin-top: auto;
+	margin-bottom: 32px;
+	font-size: 15px;
+	line-height: 20px;
+	color: #999999;
+	text-align: center;
+}
+.main-page-title{
+	padding-top: 67px;
+}
+
+.uprate-form{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -8px;
+	margin-right: -8px;
+	margin-bottom: 33px;
+
+	&.confirm-sms-form{
+		margin-bottom: 8px;
+		.uprate-form__label{
+			flex: 0 0 48px;
+
+			.uprate-form__input{
+				padding: 10px 15px;
+				text-align: center;
+				font-size: 22px;
+				line-height: 28px;
+
+				@media screen and (max-width: 320px) {
+					padding: 5px;
+					height: 40px;
+				}
+			}
+			@media screen and (max-width: 320px) {
+				flex: 1 1 0;
+			}
+		}
+	}
+}
+.uprate-form__label{
+	display: block;
+	margin-bottom: 16px;
+	flex: 1 1 auto;
+	margin: 0 4px 16px 4px;
+	&.label-phone-codes{
+		flex: 0 0 93px;
+		position: relative;
+	}
+}
+.uprate-form__input{
+	padding: 14px 20px;
+	height: 48px;
+	display: block;
+	width: 100%;
+	border: 1px solid #E0E0E0;
+	border-radius: 16px;
+	color: $text-light;
+	@include placecolor($text-light);
+}
+.icon-chevron-down{
+	position: absolute;
+	top: 50%;
+	right: 16px;
+	transform: translateY(-50%);
+	width: 12px;
+	height: 6px;
+
+	img{
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+}

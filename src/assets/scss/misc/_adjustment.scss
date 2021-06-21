@@ -1,0 +1,368 @@
+*{
+	box-sizing: border-box;
+}
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+body{
+	font-family: $sf-t-light;
+	font-weight: normal;
+	font-size: 15px;
+	min-width: 320px;
+	position: relative;
+	// line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+	color: $text;
+}
+
+ul, li{
+	margin: 0;
+	padding: 0;
+}
+//input
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+	appearance: none;
+}
+.input,
+input{
+	outline: none;
+	display: block;
+	width: 100%;
+}
+textarea.input{
+	resize: none;
+	padding: 0 0;
+}
+//END input
+.main{
+	position: relative;
+	display: flex;
+	// padding: 0 24px;
+	height: 100%;
+	flex-direction: column;
+	// justify-content: center;
+	max-width: 767px;
+	margin: 0 auto;
+	overflow: hidden;
+
+	& > .button{
+		margin-top: auto;
+		margin-bottom: 32px;
+		margin-left: 24px;
+		margin-right: 24px;
+		max-width: calc(100% - 42px);
+		// position: absolute;
+		// right: 0;
+		// left: 0;
+		// margin-left: auto;
+		// margin-right: auto;
+		// bottom: 32px;
+	}
+}
+
+// HEADER
+.header{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: $header-height;
+	width: 100%;
+	padding: 0 24px;
+	flex-shrink: 0;
+	background-color: #fff;
+
+	.icon-add-meeting{
+		cursor: pointer;
+		position: absolute;
+		right: 24px;
+		top: 50%;
+		margin-top: -10px;
+
+		&:hover, &:active, &:focus{
+			opacity: 0.5;
+		}
+
+	}
+	&.no-pd{
+		padding: 0;
+
+		.icon-nav-back{
+			left: 24px;
+
+		}
+	}
+	&.bg-none{
+		background-color: transparent;
+	}
+	&.between{
+		justify-content: space-between;
+
+		.icon-add-meeting{
+			position: static;
+			transform: none;
+			margin-top: 0;
+		}
+		.header-icons-box{
+			position: static;
+			transform: none;
+		}
+	}
+
+}
+.header-icons-box{
+	position: absolute;
+	right: 24px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+
+	.icon{
+		margin-right: 12px;
+
+
+		&:last-child{
+			margin-right: 0;	
+		}
+
+	}
+
+	.icon-add-meeting{
+		position: static;
+		margin-top: 0;
+	}
+}
+.meetings-header__label{
+	font-size: 17px;
+	line-height: 22px;
+	font-family: $sf-t-semi;
+}
+// ENDE HEADER
+
+.wrapper{
+	width: 100%;
+	max-width: 767px;
+	padding: 0 24px;
+	margin: 0 auto;
+	// outline: 1px solid coral;
+}
+h1{
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 34px;
+	font-family: $sf-d-semi;
+}
+.caption{
+	margin-bottom: 35px;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 22px;
+	color: #666666;
+
+	a{
+		color: $link;
+		text-decoration: none;
+	}
+}
+.button{
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 328px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 48px;
+  border: none;
+  text-decoration: none;
+  background-color: $accent;
+  // padding: 15px 45px;
+  box-shadow: 0px 5px 20px rgba(255, 204, 0, 0.5);
+	border-radius: 16px;
+  text-align: center;
+  outline: none;
+  transition: background-color .1s ease;
+  font-family: $sf-d-reg;
+	
+  &:hover{
+     background-color: lighten($accent, 5%);
+  }
+   
+		
+  &:active{
+   background-color: darken($accent, 5%);
+  }
+
+  &.empty{
+  	background-color: transparent;
+  	border: 1px solid #6979F8;
+  	box-shadow: 0px 5px 20px rgba(105, 121, 248, 0.1);
+  }
+  &-gray{
+  	background: $gray;
+  	color: #999999;
+  	box-shadow: none;
+  }
+  @media only screen and (max-width: 320px){
+  	width: 100%;
+  	max-width: 100%;
+  }
+   
+}
+.icon{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	img, svg{
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	&.icon-header-search{
+		width: 18px;
+		height: 18px;
+	}
+	&.icon-header-chev{
+		width: 20px;
+		height: 20px;
+	}
+	&.icon-customization{
+		width: 22px;
+		height: 18px;
+	}
+	&.icon-edit{
+		width: 16px;
+		height: 16px;
+	}
+	&.icon-photo{
+		width: 16px;
+		height: 13px;
+	}
+}
+// v-calendar customization
+	
+	.vc-container{
+		border: none;
+		overflow: hidden;
+	}
+	.vc-header{
+		margin-bottom: 15px;
+		padding-left: 24px !important;
+		padding-right: 24px !important;
+		// padding: 10px 24px 0 24px;
+	}
+	.vc-arrow{
+		width: 26px;
+		height: 26px;
+		background-repeat: no-repeat;
+		background-position: center center;
+
+		.vc-svg-icon{
+			display: none;
+		}
+		
+
+		&.is-left{
+			background-image: url(~@/assets/img/icons/modal/calendar-prev.svg);
+		}
+		&.is-right{
+			background-image: url(~@/assets/img/icons/modal/calendar-next.svg);
+		}
+		&:hover, &:active, &:focus{
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-color: transparent;
+		}
+		
+	}
+	.vc-title{
+		padding-right: 15px;
+		position: relative;
+		font-size: 13px !important;
+		font-family: $sf-t-semi;
+		font-weight: normal !important;
+		text-transform: capitalize;
+
+		&:after{
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 50%;
+			width: 0;
+			transform: translateY(-50%);
+			height: 0;
+			border-style: solid;
+			border-width: 5px 4.5px 0 4.5px;
+			border-color: #151522 transparent transparent transparent;
+		}
+	}
+	.vc-weeks{
+		margin: 0 -7px;
+	}
+	.vc-weekday{
+		font-size: 11px !important;
+		font-family: $sf-t-reg;
+		color: #666666;
+		text-transform: uppercase;
+		font-weight: normal !important;
+	}
+	.vc-day{
+		min-height: 34px !important; 
+	}
+	.vc-day-content{
+		font-size: 15px !important;
+	}
+	.vc-highlights ~ .vc-day-content{
+		background-color: $link !important;
+		font-weight: normal !important;
+	}
+	// END v-calendar customization
+.hidden{
+	display: none;
+}
+
+.ibg{
+background-position: center; 
+background-size: cover; 
+background-repeat: no-repeat; 
+position: relative;
+}
+
+.ibg img{
+	width: 100%; 
+	height: 100%; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	opacity: 0; 
+	// visibility: hidden;
+}
+._prod-img {
+	position: relative;
+	padding-bottom: 80%;
+	img{
+		@include absolute-center-old;
+	}
+}
+._fit{
+	position: relative;
+}
+._fit img{//_fit - class for object-fit
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	object-fit: cover; 
+	object-position: center center;
+}
+
