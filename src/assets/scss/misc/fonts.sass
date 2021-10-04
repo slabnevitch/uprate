@@ -1,0 +1,47 @@
+// @mixin font($fname, $fstyle, $furl)
+//   @font-face
+//     font-family: $fname
+//     font-style: $fstyle
+//     font-display: swap
+//   	unicode-range: U+000-5FF
+//     src: url($furl) format('woff2')
+
+// @include font("SF-Pro-Display-Light", normal, "~@/assets/fonts/SF-Pro-Display-Light.woff2");
+// @include font("SF-Pro-Display-Medium", normal, "~@/assets/fonts/SF-Pro-Display-Medium.woff2");
+// @include font("SF-Pro-Display-Regular", normal, "~@/assets/fonts/SF-Pro-Display-Regular.woff2");
+// @include font("SF-Pro-Display-Semibold", normal, "~@/assets/fonts/SF-Pro-Display-Semibold.woff2");
+// @include font("SF-Pro-Text-Light", normal, "~@/assets/fonts/SF-Pro-Text-Light.woff2");
+// @include font("SF-Pro-Text-Regular", normal, "~@/assets/fonts/SF-Pro-Text-Regular.woff2");
+// @include font("SF-Pro-Text-Semibold", normal, "~@/assets/fonts/SF-Pro-Text-Semibold.woff2");
+
+// @import 'fonts-helpers/_font-source-declaration.scss';
+// @import 'fonts-helpers/_font-face';
+@import "bourbon/bourbon"
++font-face("SF-Pro-Display-Light", "~@/assets/fonts/SF-Pro-Display-Light", $file-formats: woff2 woff);
+
++font-face("SF-Pro-Display-Medium", "~@/assets/fonts/SF-Pro-Display-Medium", $file-formats: woff woff2);
++font-face("SF-Pro-Display-Regular", "~@/assets/fonts/SF-Pro-Display-Regular", $file-formats: woff woff2);
++font-face("SF-Pro-Display-Semibold", "~@/assets/fonts/SF-Pro-Display-Semibold", $file-formats: woff woff2);
++font-face("SF-Pro-Text-Light", "~@/assets/fonts/SF-Pro-Text-Light", $file-formats: woff woff2);
++font-face("SF-Pro-Text-Regular", "~@/assets/fonts/SF-Pro-Text-Regular", $file-formats: woff woff2);
++font-face("SF-Pro-Text-Semibold", "~@/assets/fonts/SF-Pro-Text-Semibold", $file-formats: woff woff2);
+
+// Метод подключения с Хабра
+	// @font-face {
+	//   font-family: 'Geometria';
+	//   src: local('Geometria Thin'), local('Geometria-Thin'),
+	//     url('~@/assets/fonts/geometria/Geometria-Thin.woff') format('woff'),
+	//     url('~@/assets/fonts/geometria/Geometria-Thin.woff2') format('woff2');
+	//   font-weight: 100;
+	//   font-style: normal;
+	// }
+
+// Метод подключения отсюда https://blog.logrocket.com/best-practices-for-loading-fonts-in-vue/
+	// @font-face {
+	//   font-family: "Roboto";
+	//   font-weight: 400;
+	//   font-style: normal;
+	//   font-display: auto;
+	//   unicode-range: U+000-5FF;
+	//   src: local("Roboto"), url("/fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("/fonts/Roboto/Roboto-Regular.woff") format("woff");
+	// }
